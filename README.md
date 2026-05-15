@@ -1,36 +1,143 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# أثر AI | Athar AI
 
-## Getting Started
+منصة إرشاد أكاديمي ذكية تساعد طلاب الجامعات على فهم مستواهم الأكاديمي، تحليل نقاط القوة والضعف، اختيار المواد المناسبة، بناء خطة تطوير شخصية، والحصول على توصيات ذكية مبنية على بيانات الطالب الفعلية باستخدام الذكاء الاصطناعي.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# فكرة المشروع
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+أثر AI هي منصة تعتمد على الذكاء الاصطناعي لمساعدة الطلاب الجامعيين في اتخاذ قرارات أكاديمية أفضل خلال رحلتهم الجامعية.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+تركز المنصة على الإرشاد الأكاديمي وليس الإرشاد المهني، حيث تساعد الطالب على فهم مستواه الحالي، تحديد المواد التي يحتاج إلى تقويتها، معرفة مدى مناسبة تخصصه الحالي، اقتراح مواد الترم القادم، واقتراح دورات وأنشطة تساعده على تحسين أدائه الأكاديمي.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+يقوم النظام بتحليل بيانات الطالب مثل:
 
-## Learn More
+- التخصص الجامعي
+- المرحلة أو المستوى الدراسي
+- المعدل الحالي
+- المواد التي يواجه فيها صعوبة
+- المواد التي يتميز فيها
+- أسلوب التعلم
+- ساعات الدراسة الأسبوعية
+- الهدف الأكاديمي
+- الدورات والأنشطة المكتملة
+- مستوى الالتزام داخل المنصة
 
-To learn more about Next.js, take a look at the following resources:
+ثم يستخدم الذكاء الاصطناعي لبناء:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- تحليل أكاديمي ذكي
+- خريطة نقاط قوة وضعف
+- توصيات دراسية مخصصة
+- اقتراح مواد الترم القادم
+- اقتراح دورات مجانية مناسبة
+- اقتراح أنشطة تدريبية تعليمية
+- تحليل ملاءمة التخصص
+- تدقيق مستوى الطالب مع الوقت
+- خطة تطور أكاديمية واضحة
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+# التقنيات المستخدمة
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Frontend
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- App Router
+- RTL Arabic Interface
+
+## Backend
+
+- Supabase
+- PostgreSQL
+- Supabase Auth
+- Supabase Storage
+- Row Level Security
+
+## Artificial Intelligence
+
+- OpenAI API
+- OpenAI Responses API
+- AI Academic Analysis
+- AI Level Check
+- AI Major Fit Analysis
+- AI Next Semester Planning
+- AI Activities Recommendation
+- AI Academic Assistant
+
+## UI & Assets
+
+- Lucide React Icons
+- Custom Brand Logo
+- Academic Background Image
+- Glassmorphism UI
+- Responsive Design
+- Arabic RTL Layout
+
+## Deployment & Tools
+
+- Vercel
+- GitHub
+- npm
+- Webpack
+- PowerShell
+
+---
+
+# مميزات المشروع
+
+- إنشاء حساب طالب جديد
+- تسجيل دخول آمن عبر Supabase
+- حفظ بيانات الطالب الأكاديمية
+- لوحة تحكم مخصصة لكل طالب
+- تحليل نقاط القوة والضعف
+- عرض رحلة الطالب الأكاديمية
+- مساعد أكاديمي ذكي
+- توليد أنشطة تدريبية مناسبة
+- تدقيق ذكي لمستوى الطالب
+- تحليل مدى ملاءمة التخصص الحالي
+- اقتراح مواد الترم القادم
+- اقتراح دورات مناسبة لاحتياج الطالب
+- تتبع إنجاز الأنشطة والدورات
+- تصميم عربي كامل RTL
+- واجهة أكاديمية حديثة ومريحة للعين
+- استخدام خلفية وشعار خاص بالمنصة
+- ربط حقيقي مع Supabase و OpenAI
+
+---
+
+# طريقة عمل الذكاء الاصطناعي
+
+يقوم النظام بجلب بيانات الطالب من قاعدة البيانات ثم إرسالها إلى OpenAI API عبر API Routes داخل Next.js.
+
+يقوم الذكاء الاصطناعي بتحليل:
+
+- المستوى الأكاديمي الحالي
+- المواد الضعيفة
+- المواد القوية
+- التخصص الحالي
+- معدل الطالب
+- هدف الطالب الأكاديمي
+- أسلوب التعلم
+- الأنشطة المكتملة
+- الدورات المكتملة
+- مدى التزام الطالب بتوصيات المنصة
+
+ثم يقوم النظام بتوليد:
+
+- تشخيص أكاديمي واضح
+- توصيات عملية للتحسن
+- أنشطة تدريبية مرتبطة باحتياج الطالب
+- تحليل مستوى الطالب
+- توصية حول مناسبة التخصص
+- خطة للترم القادم
+- مواد مقترحة للتسجيل
+- قواعد تسجيل مناسبة
+- رحلة دراسية للترم القادم
+
+---
+
+
+
