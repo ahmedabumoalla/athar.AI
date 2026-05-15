@@ -146,47 +146,48 @@ export default function SignupPage() {
   return (
     <div
       dir="rtl"
-      className="relative min-h-dvh overflow-hidden bg-[#0F1E3A] text-white"
+      className="relative min-h-dvh overflow-hidden bg-[#F6F8FB] text-[#172033]"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_20%,rgba(96,165,250,0.22),transparent_55%),radial-gradient(ellipse_at_80%_30%,rgba(20,184,166,0.12),transparent_50%),radial-gradient(ellipse_at_50%_100%,rgba(250,204,21,0.06),transparent_45%)]" />
+      <img
+        src="/images/athar-background.png"
+        alt=""
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center"
+      />
 
-      <div className="pointer-events-none absolute -left-24 top-1/4 h-72 w-72 rounded-full bg-[#60A5FA]/20 blur-3xl" />
-      <div className="pointer-events-none absolute -right-16 bottom-0 h-80 w-80 rounded-full bg-[#14B8A6]/10 blur-3xl" />
+      <div className="absolute inset-0 bg-white/60" />
+
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_20%,rgba(255,255,255,0.55),transparent_52%),radial-gradient(ellipse_at_50%_100%,rgba(37,99,235,0.08),transparent_45%)]" />
 
       <header className="relative z-10 mx-auto flex max-w-6xl items-center justify-between px-5 py-6 md:px-10">
         <Link href="/" className="flex items-center gap-3">
-          <div className="h-11 w-11 rounded-2xl bg-gradient-to-br from-[#60A5FA] to-[#1E3A8A] shadow-lg shadow-blue-950/30 ring-1 ring-white/15" />
+          <img
+            src="/brand/athar-logo-color.png"
+            alt="أثر AI"
+            className="h-28 w-auto object-contain"
+          />
 
-          <div>
-            <div className="text-sm font-extrabold tracking-tight">
-              أثر AI
-            </div>
-
-            <div className="text-xs text-white/65">
-              إرشاد أكاديمي ذكي
-            </div>
-          </div>
+          
         </Link>
 
         <Link
           href="/login"
-          className="rounded-xl border border-white/10 bg-white/[0.07] px-5 py-2 text-sm font-bold text-white transition hover:bg-white/[0.11]"
+          className="rounded-2xl border border-[#D7DEE8] bg-white/80 px-5 py-2.5 text-sm font-bold text-[#1E3A8A] shadow-sm backdrop-blur transition hover:bg-white"
         >
           تسجيل الدخول
         </Link>
       </header>
 
       <main className="relative z-10 mx-auto max-w-4xl px-5 pb-16 pt-4 md:px-10">
-        <section className="rounded-[2rem] border border-white/10 bg-white/[0.07] p-7 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-2xl">
-          <p className="mb-4 inline-flex rounded-full border border-white/10 bg-white/[0.06] px-4 py-1.5 text-xs font-semibold text-[#DBEAFE]">
+        <section className="rounded-[2rem] border border-white/70 bg-white/82 p-7 shadow-[0_24px_80px_rgba(15,30,58,0.12)] backdrop-blur-xl">
+          <p className="mb-4 inline-flex rounded-full border border-[#BFDBFE] bg-[#EFF6FF]/90 px-4 py-1.5 text-xs font-semibold text-[#1D4ED8]">
             إنشاء حساب طالب جديد
           </p>
 
-          <h1 className="text-3xl font-black leading-snug tracking-tight text-white md:text-5xl">
+          <h1 className="text-3xl font-black leading-snug tracking-tight text-[#111827] md:text-5xl">
             أنشئ حسابك الأكاديمي
           </h1>
 
-          <p className="mt-4 text-sm leading-relaxed text-[#D7E3F8]/75">
+          <p className="mt-4 text-sm leading-relaxed text-[#5B6472]">
             عبّئ بياناتك الأساسية وسيتم حفظ ملفك الأكاديمي وتحليل حالتك داخل
             المنصة
           </p>
@@ -275,7 +276,7 @@ export default function SignupPage() {
           </div>
 
           {message && (
-            <div className="mt-4 rounded-2xl border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-100">
+            <div className="mt-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-600">
               {message}
             </div>
           )}
@@ -283,7 +284,7 @@ export default function SignupPage() {
           <button
             onClick={handleSignup}
             disabled={loading}
-            className="mt-6 flex h-12 w-full items-center justify-center rounded-xl bg-[#3B82F6] text-sm font-bold text-white shadow-lg shadow-blue-950/30 transition hover:bg-[#2563EB] disabled:opacity-50"
+            className="mt-6 flex h-12 w-full items-center justify-center rounded-2xl bg-[#1E3A8A] text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-[#1D4ED8] disabled:opacity-50"
           >
             {loading ? "جاري إنشاء الحساب..." : "إنشاء الحساب والدخول"}
           </button>
@@ -306,7 +307,7 @@ function Input({
 }) {
   return (
     <label className="block">
-      <span className="mb-2 block text-xs font-bold text-[#D7E3F8]/70">
+      <span className="mb-2 block text-xs font-bold text-[#667085]">
         {label}
       </span>
 
@@ -314,7 +315,7 @@ function Input({
         value={value}
         type={type}
         onChange={(e) => onChange(e.target.value)}
-        className="h-12 w-full rounded-xl border border-white/10 bg-white/[0.06] px-4 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-[#60A5FA] focus:bg-white/[0.1]"
+        className="h-12 w-full rounded-2xl border border-[#D7DEE8] bg-white/80 px-4 text-sm text-[#172033] shadow-sm outline-none transition placeholder:text-[#94A3B8] focus:border-[#93C5FD] focus:bg-white"
       />
     </label>
   );

@@ -14,7 +14,6 @@ import {
   Loader2,
   LogOut,
   Map,
-  Sparkles,
   Target,
   UserRound,
   Zap,
@@ -197,10 +196,18 @@ export default function DashboardPage() {
     return (
       <div
         dir="rtl"
-        className="flex min-h-dvh items-center justify-center bg-[#F6F8FB] text-[#172033]"
+        className="relative flex min-h-dvh items-center justify-center overflow-hidden bg-[#F6F8FB] text-[#172033]"
       >
-        <div className="flex items-center gap-3 text-sm font-bold text-[#667085]">
-          <Loader2 className="h-5 w-5 animate-spin" />
+        <img
+          src="/images/athar-background.png"
+          alt=""
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-45"
+        />
+
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]" />
+
+        <div className="relative z-10 flex items-center gap-3 rounded-3xl border border-white/70 bg-white/80 px-6 py-4 text-sm font-bold text-[#667085] shadow-xl backdrop-blur">
+          <Loader2 className="h-5 w-5 animate-spin text-[#1E3A8A]" />
           جاري تحميل بياناتك الأكاديمية
         </div>
       </div>
@@ -211,9 +218,17 @@ export default function DashboardPage() {
     return (
       <div
         dir="rtl"
-        className="flex min-h-dvh items-center justify-center bg-[#F6F8FB] px-5"
+        className="relative flex min-h-dvh items-center justify-center overflow-hidden bg-[#F6F8FB] px-5"
       >
-        <div className="max-w-md rounded-3xl border border-[#E5EAF1] bg-white p-6 text-center shadow-xl">
+        <img
+          src="/images/athar-background.png"
+          alt=""
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-45"
+        />
+
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]" />
+
+        <div className="relative z-10 max-w-md rounded-3xl border border-white/70 bg-white/80 p-6 text-center shadow-xl backdrop-blur">
           <UserRound className="mx-auto h-10 w-10 text-[#1E3A8A]" />
 
           <h1 className="mt-4 text-xl font-black text-[#172033]">
@@ -226,7 +241,7 @@ export default function DashboardPage() {
 
           <Link
             href="/signup"
-            className="mt-6 flex h-12 items-center justify-center rounded-xl bg-[#1E3A8A] text-sm font-bold text-white transition hover:bg-[#1D4ED8]"
+            className="mt-6 flex h-12 items-center justify-center rounded-2xl bg-[#1E3A8A] text-sm font-bold text-white transition hover:bg-[#1D4ED8]"
           >
             إكمال بيانات الطالب
           </Link>
@@ -240,26 +255,33 @@ export default function DashboardPage() {
       dir="rtl"
       className="relative min-h-dvh overflow-hidden bg-[#F6F8FB] text-[#172033]"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_10%,rgba(37,99,235,0.12),transparent_55%),radial-gradient(ellipse_at_85%_20%,rgba(20,184,166,0.10),transparent_50%),radial-gradient(ellipse_at_50%_100%,rgba(245,158,11,0.08),transparent_45%)]" />
+      <img
+        src="/images/athar-background.png"
+        alt=""
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-45"
+      />
+
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]" />
+
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_20%,rgba(255,255,255,0.65),transparent_52%),radial-gradient(ellipse_at_50%_100%,rgba(37,99,235,0.08),transparent_45%)]" />
 
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-5 py-6 md:px-10">
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-[#1E3A8A] to-[#3B82F6] shadow-lg shadow-blue-900/15 ring-1 ring-white">
-            <Sparkles className="h-5 w-5 text-white" />
-          </div>
+          <img
+            src="/brand/athar-logo-color.png"
+            alt="أثر AI"
+            className="h-22 w-22 object-contain"
+          />
 
           <div>
-            <div className="text-sm font-extrabold text-[#172033]">
-              أثر AI
-            </div>
-
+            
             <div className="text-xs text-[#667085]">
               لوحة الطالب الأكاديمية
             </div>
           </div>
         </Link>
 
-        <div className="flex items-center gap-3 rounded-2xl border border-[#E5EAF1] bg-white/80 px-3 py-2 shadow-sm backdrop-blur">
+        <div className="flex items-center gap-3 rounded-2xl border border-white/70 bg-white/80 px-3 py-2 shadow-sm backdrop-blur">
           <div className="relative">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1E3A8A] text-sm font-black text-white">
               {initials}
@@ -290,7 +312,7 @@ export default function DashboardPage() {
 
       <main className="relative z-10 mx-auto max-w-7xl px-5 pb-16 md:px-10">
         <section className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="rounded-3xl border border-[#E5EAF1] bg-white/80 p-6 shadow-xl backdrop-blur-xl">
+          <div className="rounded-3xl border border-white/70 bg-white/82 p-6 shadow-[0_24px_80px_rgba(15,30,58,0.10)] backdrop-blur-xl">
             <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
               <div className="flex items-center gap-4">
                 <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-[#EFF6FF] ring-1 ring-[#DBEAFE]">
@@ -302,7 +324,7 @@ export default function DashboardPage() {
                     مرحبًا بك
                   </p>
 
-                  <h1 className="mt-1 text-2xl font-black md:text-4xl">
+                  <h1 className="mt-1 text-2xl font-black text-[#111827] md:text-4xl">
                     {profile.full_name}
                   </h1>
 
@@ -313,12 +335,12 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-[#E5EAF1] bg-[#F8FAFC] px-4 py-3">
+              <div className="rounded-2xl border border-[#E5EAF1] bg-[#F8FAFC]/90 px-4 py-3">
                 <p className="text-xs text-[#64748B]">
                   بداية الرحلة
                 </p>
 
-                <p className="mt-1 text-sm font-bold">
+                <p className="mt-1 text-sm font-bold text-[#172033]">
                   {startDate}
                 </p>
               </div>
@@ -347,11 +369,11 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-[#E5EAF1] bg-white/80 p-6 shadow-xl backdrop-blur-xl">
+          <div className="rounded-3xl border border-white/70 bg-white/82 p-6 shadow-[0_24px_80px_rgba(15,30,58,0.10)] backdrop-blur-xl">
             <div className="mb-4 flex items-center gap-2">
               <GraduationCap className="h-5 w-5 text-[#1D4ED8]" />
 
-              <h2 className="text-lg font-black">
+              <h2 className="text-lg font-black text-[#172033]">
                 ملخصك الأكاديمي
               </h2>
             </div>
@@ -360,35 +382,35 @@ export default function DashboardPage() {
               هذه البيانات مأخوذة من قاعدة البيانات بناءً على حسابك الحالي وسيتم لاحقًا ربطها بموديل الذكاء الاصطناعي لإنتاج تحليل أعمق ومخصص
             </p>
 
-            <div className="mt-5 rounded-2xl border border-[#E5EAF1] bg-[#F8FAFC] p-4">
+            <div className="mt-5 rounded-2xl border border-[#E5EAF1] bg-[#F8FAFC]/90 p-4">
               <p className="text-xs text-[#64748B]">
                 هدفك الحالي
               </p>
 
-              <p className="mt-2 text-sm font-bold leading-relaxed">
+              <p className="mt-2 text-sm font-bold leading-relaxed text-[#172033]">
                 {profile.goal || "لم يتم تحديد هدف أكاديمي بعد"}
               </p>
             </div>
 
             <Link
               href="/dashboard/next-semester"
-              className="mt-5 flex h-12 items-center justify-center rounded-xl bg-[#1E3A8A] text-sm font-bold text-white transition hover:bg-[#1D4ED8]"
+              className="mt-5 flex h-12 items-center justify-center rounded-2xl bg-[#1E3A8A] text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-[#1D4ED8]"
             >
               اقتراح مواد الترم القادم
             </Link>
           </div>
         </section>
 
-        <section className="mt-6 rounded-3xl border border-[#E5EAF1] bg-white/80 p-6 shadow-xl backdrop-blur-xl">
+        <section className="mt-6 rounded-3xl border border-white/70 bg-white/82 p-6 shadow-[0_24px_80px_rgba(15,30,58,0.10)] backdrop-blur-xl">
           <div className="mb-6 flex items-center gap-2">
             <Map className="h-5 w-5 text-[#1D4ED8]" />
 
-            <h2 className="text-lg font-black">
+            <h2 className="text-lg font-black text-[#172033]">
               رحلتك الأكاديمية
             </h2>
           </div>
 
-          <div className="relative overflow-hidden rounded-3xl border border-[#E5EAF1] bg-[#F8FAFC] p-5">
+          <div className="relative overflow-hidden rounded-3xl border border-[#E5EAF1] bg-[#F8FAFC]/90 p-5">
             <div className="absolute right-8 top-10 h-[calc(100%-5rem)] w-1 rounded-full bg-[#D7DEE8] md:right-1/2 md:top-1/2 md:h-1 md:w-[80%] md:-translate-y-1/2 md:translate-x-1/2" />
 
             <div className="relative grid gap-8 md:grid-cols-5">
@@ -407,7 +429,7 @@ export default function DashboardPage() {
                     {item.sort_order}
                   </div>
 
-                  <h3 className="mt-4 text-sm font-black">
+                  <h3 className="mt-4 text-sm font-black text-[#172033]">
                     {item.title}
                   </h3>
 
@@ -442,7 +464,7 @@ export default function DashboardPage() {
 
         <section className="mt-6">
           <div className="mb-5">
-            <h2 className="text-2xl font-black">
+            <h2 className="text-2xl font-black text-[#172033]">
               أدوات أثر AI
             </h2>
 
@@ -459,13 +481,13 @@ export default function DashboardPage() {
                 <Link
                   key={action.href}
                   href={action.href}
-                  className="group rounded-3xl border border-[#E5EAF1] bg-white/80 p-5 shadow-lg shadow-slate-200/40 backdrop-blur-xl transition hover:-translate-y-1 hover:border-[#BFDBFE] hover:bg-white"
+                  className="group rounded-3xl border border-white/70 bg-white/82 p-5 shadow-lg shadow-slate-200/40 backdrop-blur-xl transition hover:-translate-y-1 hover:border-[#BFDBFE] hover:bg-white"
                 >
                   <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#EFF6FF] ring-1 ring-[#DBEAFE] transition group-hover:bg-[#1E3A8A]">
                     <Icon className="h-5 w-5 text-[#1E3A8A] group-hover:text-white" />
                   </div>
 
-                  <h3 className="text-lg font-black">
+                  <h3 className="text-lg font-black text-[#172033]">
                     {action.title}
                   </h3>
 
@@ -490,12 +512,12 @@ function MiniStat({
   value: string;
 }) {
   return (
-    <div className="rounded-2xl border border-[#E5EAF1] bg-[#F8FAFC] p-4">
+    <div className="rounded-2xl border border-[#E5EAF1] bg-[#F8FAFC]/90 p-4">
       <p className="text-xs text-[#64748B]">
         {title}
       </p>
 
-      <p className="mt-2 text-sm font-black leading-relaxed">
+      <p className="mt-2 text-sm font-black leading-relaxed text-[#172033]">
         {value}
       </p>
     </div>
@@ -512,11 +534,11 @@ function AnalysisCard({
   icon: React.ReactNode;
 }) {
   return (
-    <div className="rounded-3xl border border-[#E5EAF1] bg-white/80 p-5 shadow-xl backdrop-blur-xl">
+    <div className="rounded-3xl border border-white/70 bg-white/82 p-5 shadow-xl backdrop-blur-xl">
       <div className="mb-4 flex items-center gap-2">
         {icon}
 
-        <h2 className="text-lg font-black">
+        <h2 className="text-lg font-black text-[#172033]">
           {title}
         </h2>
       </div>
@@ -525,7 +547,7 @@ function AnalysisCard({
         {items.map((item) => (
           <div
             key={item}
-            className="rounded-2xl border border-[#E5EAF1] bg-[#F8FAFC] px-4 py-3 text-sm leading-relaxed text-[#4B5563]"
+            className="rounded-2xl border border-[#E5EAF1] bg-[#F8FAFC]/90 px-4 py-3 text-sm leading-relaxed text-[#4B5563]"
           >
             {item}
           </div>
